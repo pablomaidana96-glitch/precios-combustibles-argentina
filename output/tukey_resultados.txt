@@ -1,0 +1,76 @@
+
+> cat("\n=== TEST POST-HOC DE TUKEY ===\n\n")
+
+=== TEST POST-HOC DE TUKEY ===
+
+
+> print(tukey)
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = precio ~ region, data = df)
+
+$region
+                              diff        lwr
+NEA-Centro                3.754872  -12.46353
+NOA-Centro              -68.196308  -85.10740
+Cuyo/Comahue-Centro    -189.561380 -204.36588
+Patagonia-Centro       -307.471066 -330.99925
+NOA-NEA                 -71.951181  -94.25925
+Cuyo/Comahue-NEA       -193.316253 -214.07289
+Patagonia-NEA          -311.225938 -338.88892
+Cuyo/Comahue-NOA       -121.365072 -142.66734
+Patagonia-NOA          -239.274757 -267.34946
+Patagonia-Cuyo/Comahue -117.909685 -144.76815
+                              upr     p adj
+NEA-Centro               19.97328 0.9699768
+NOA-Centro              -51.28522 0.0000000
+Cuyo/Comahue-Centro    -174.75689 0.0000000
+Patagonia-Centro       -283.94288 0.0000000
+NOA-NEA                 -49.64311 0.0000000
+Cuyo/Comahue-NEA       -172.55961 0.0000000
+Patagonia-NEA          -283.56296 0.0000000
+Cuyo/Comahue-NOA       -100.06281 0.0000000
+Patagonia-NOA          -211.20006 0.0000000
+Patagonia-Cuyo/Comahue  -91.05122 0.0000000
+
+
+> sink()
+
+> cat("\n=== TEST POST-HOC DE TUKEY ===\n\n")
+
+=== TEST POST-HOC DE TUKEY ===
+
+
+> print(tukey)
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = precio ~ region, data = df)
+
+$region
+                              diff        lwr
+NEA-Centro                3.754872  -12.46353
+NOA-Centro              -68.196308  -85.10740
+Cuyo/Comahue-Centro    -189.561380 -204.36588
+Patagonia-Centro       -307.471066 -330.99925
+NOA-NEA                 -71.951181  -94.25925
+Cuyo/Comahue-NEA       -193.316253 -214.07289
+Patagonia-NEA          -311.225938 -338.88892
+Cuyo/Comahue-NOA       -121.365072 -142.66734
+Patagonia-NOA          -239.274757 -267.34946
+Patagonia-Cuyo/Comahue -117.909685 -144.76815
+                              upr     p adj
+NEA-Centro               19.97328 0.9699768
+NOA-Centro              -51.28522 0.0000000
+Cuyo/Comahue-Centro    -174.75689 0.0000000
+Patagonia-Centro       -283.94288 0.0000000
+NOA-NEA                 -49.64311 0.0000000
+Cuyo/Comahue-NEA       -172.55961 0.0000000
+Patagonia-NEA          -283.56296 0.0000000
+Cuyo/Comahue-NOA       -100.06281 0.0000000
+Patagonia-NOA          -211.20006 0.0000000
+Patagonia-Cuyo/Comahue  -91.05122 0.0000000
+
+
+> sink()

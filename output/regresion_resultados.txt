@@ -1,0 +1,45 @@
+
+> cat("=== REGRESION LINEAL MULTIPLE ===\n")
+=== REGRESION LINEAL MULTIPLE ===
+
+> cat("Variable dependiente: precio ($/litro)\n")
+Variable dependiente: precio ($/litro)
+
+> cat("Variables independientes: region, marca/bandera, distancia a refineria\n\n")
+Variables independientes: region, marca/bandera, distancia a refineria
+
+
+> print(summary(modelo_reg))
+
+Call:
+lm(formula = precio ~ region + empresabandera + dist_refineria, 
+    data = df_reg)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-301.25 -124.23  -31.24  106.56  637.37 
+
+Coefficients:
+                                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                     1.402e+03  5.492e+00 255.370  < 2e-16 ***
+regionNEA                       1.409e+01  5.827e+00   2.418 0.015626 *  
+regionNOA                      -4.948e+01  6.400e+00  -7.732 1.16e-14 ***
+regionCuyo/Comahue             -1.716e+02  5.320e+00 -32.262  < 2e-16 ***
+regionPatagonia                -2.841e+02  8.685e+00 -32.705  < 2e-16 ***
+empresabanderaBLANCA            2.889e+01  6.361e+00   4.542 5.64e-06 ***
+empresabanderaDAPSA S.A.        4.868e+00  8.167e+00   0.596 0.551202    
+empresabanderaGULF              2.955e+00  9.758e+00   0.303 0.762063    
+empresabanderaPUMA             -4.426e+01  5.774e+00  -7.666 1.94e-14 ***
+empresabanderaSHELL C.A.P.S.A.  3.524e+01  4.550e+00   7.744 1.05e-14 ***
+empresabanderaVOY              -2.467e+01  1.818e+01  -1.357 0.174702    
+empresabanderaYPF              -7.618e+01  5.185e+00 -14.693  < 2e-16 ***
+dist_refineria                  1.447e-03  3.908e-04   3.703 0.000214 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 153.8 on 10107 degrees of freedom
+Multiple R-squared:  0.2461,	Adjusted R-squared:  0.2452 
+F-statistic:   275 on 12 and 10107 DF,  p-value: < 2.2e-16
+
+
+> sink()

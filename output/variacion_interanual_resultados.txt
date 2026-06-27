@@ -1,0 +1,39 @@
+
+> cat("=== VARIACIÓN INTERANUAL POR REGIÓN ===\n\n")
+=== VARIACIÓN INTERANUAL POR REGIÓN ===
+
+
+> cat("Precio promedio anual:\n")
+Precio promedio anual:
+
+> precio_anual %>%
++   pivot_wider(names_from = anio, values_from = precio_prom) %>%
++   print()
+# A tibble: 5 × 11
+  region       `2017` `2018` `2019` `2020` `2021` `2022`  `2023` `2024` `2025` `2026`
+  <chr>         <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>   <dbl>  <dbl>  <dbl>  <dbl>
+1 Centro       12611. 20969. 36039. 42084. 48342. 87774. 189234. 39610. 35726. 23445.
+2 Cuyo/Comahue  2020.  2912.  4310.  5560.  6371. 10380.  22986. 46225. 44258.  1812.
+3 NEA           2750.  3439.  4859.  7187.  6620. 10813.  18007. 43499. 36729. 15570.
+4 NOA           2299.  3591.  4790.  5866.  5413.  8197.  16574. 32425. 29350.  4235.
+5 Patagonia     1692.  2522.  3799.  4627.  5152.  7189.  13257. 35108. 31135. 19592.
+
+> cat("\nVariación interanual (%):\n")
+
+Variación interanual (%):
+
+> variacion %>%
++   select(region, anio, variacion_pct) %>%
++   pivot_wider(names_from = anio, values_from = variacion_pct) %>%
++   print()
+# A tibble: 5 × 10
+# Groups:   region [5]
+  region       `2018` `2019` `2020` `2021` `2022` `2023` `2024` `2025` `2026`
+  <chr>         <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>
+1 Centro         66.3   71.9   16.8   14.9   81.6  116.   -79.1   -9.8  -34.4
+2 Cuyo/Comahue   44.1   48     29     14.6   62.9  121.   101.    -4.3  -95.9
+3 NEA            25     41.3   47.9   -7.9   63.3   66.5  142.   -15.6  -57.6
+4 NOA            56.2   33.4   22.5   -7.7   51.4  102.    95.6   -9.5  -85.6
+5 Patagonia      49.1   50.6   21.8   11.4   39.5   84.4  165.   -11.3  -37.1
+
+> sink()
